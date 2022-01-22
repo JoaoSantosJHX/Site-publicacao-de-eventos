@@ -5,13 +5,10 @@ function Login() {
     return (
     <div className="login-content d-flex align-items-center">
         <form className="form-signin mx-auto">
-            <img className="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="Login" width="72" height="57"/>
+            
             <h1 class="h3 mb-3 fw-bold text-white font-weight-bold text-center">Login</h1>
 
-            {/* <div className="form-floating">
-            <input type="email" class="form-control my-2" id="floatingInput" placeholder="name@example.com"/>
-            <label for="floatingInput">Email address</label>
-            </div> */}
+            
             <input type="email" id="inputEmail" class="form-control my-2" placeholder="email"/>
 
             <input type="password" id="inputPassword" class="form-control my-2" placeholder="senha"/>
@@ -22,7 +19,20 @@ function Login() {
             </label>
             </div>
             <button className="w-100 btn btn-lg btn-login" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+
+            <div className="msg-login text-white text-center my-4">
+                <span><strong>Foi!</strong> Voce esta conectado! &#129299;</span>
+                <br></br>
+                <span><strong>Ops!</strong> Verifique se a senha ou o usuario estao corretos! &#128556;</span>
+            </div>
+
+            <div className="opcoes-login mt-5 text-center">
+                <a href="#" className='mx-2'>Recuperar senha</a>
+                <span className="text-white">&#9733;</span>
+                <a href="#"className='mx-2'>Quero Cadastrar</a>
+            </div>
+
+            
         </form>
     </div>
     )
