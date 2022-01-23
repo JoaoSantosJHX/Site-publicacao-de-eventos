@@ -12,6 +12,7 @@ function Login() {
     const [registerSenha, setRegisterSenha] = useState()
     const [email, setEmail] = useState()
     const [senha, setSenha] = useState()
+    const [msgTipo, setMsgTipo] = useState()
 
 
     const register = async () => {
@@ -29,9 +30,9 @@ function Login() {
                 auth,
                 email, 
                 senha)
-                console.log('Login realizado!')
-            } catch (erro) {
-                console.log(erro.message)
+                setMsgTipo('Sucesso!')
+            } catch (error) {
+                setMsgTipo('erro')
             }
         
     }
@@ -55,9 +56,13 @@ function Login() {
             <button onClick={logar} className="w-100 btn btn-lg btn-login" type="button">Login</button>
 
             <div className="msg-login text-white text-center my-4">
-                <span><strong>Foi!</strong> Voce esta conectado! &#129299;</span>
-                <br></br>
-                <span><strong>Ops!</strong> Verifique se a senha ou o usuario estao corretos! &#128556;</span>
+
+            { msgTipo === 'Sucesso!' && <span><strong>Foi!</strong> Voce esta conectado! &#129299;</span>} 
+            { msgTipo === 'erro' && <span><strong>Ops!</strong> Verifique se a senha ou o usuario estao corretos! &#128556;</span>}
+               
+                
+                
+                
             </div>
 
             <div className="opcoes-login mt-5 text-center">
