@@ -2,26 +2,24 @@ import React, { useState } from 'react'
 import '../../view/login/login.css'
 import  auth  from '../../config/firebase'
 
-import firebase from '../../config/firebase'
 import 'firebase/auth'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 
 function Login() {
 
-    const [registerEmail, setRegisterEmail] = useState()
-    const [registerSenha, setRegisterSenha] = useState()
+    
     const [email, setEmail] = useState()
     const [senha, setSenha] = useState()
     const [msgTipo, setMsgTipo] = useState()
 
 
-    const register = async () => {
-        try {
-        const user = await createUserWithEmailAndPassword(auth, registerEmail, registerSenha)
-        } catch (erro) {
-            console.log(erro.message)
-        }
-    }
+    // const register = async () => {
+    //     try {
+    //     const user = await createUserWithEmailAndPassword(auth, registerEmail, registerSenha)
+    //     } catch (erro) {
+    //         console.log(erro.message)
+    //     }
+    // }
 
     const logar = async () => {
         
@@ -55,15 +53,15 @@ function Login() {
             </div>
             <button onClick={logar} className="w-100 btn btn-lg btn-login" type="button">Login</button>
 
-            <div className="msg-login text-white text-center my-4">
 
+            <div className="msg-login text-white text-center my-5">
             { msgTipo === 'Sucesso!' && <span><strong>Foi!</strong> Voce esta conectado! &#129299;</span>} 
             { msgTipo === 'erro' && <span><strong>Ops!</strong> Verifique se a senha ou o usuario estao corretos! &#128556;</span>}
+            </div>
                
                 
                 
                 
-            </div>
 
             <div className="opcoes-login mt-5 text-center">
                 <a href="#" className='mx-2'>Recuperar senha</a>

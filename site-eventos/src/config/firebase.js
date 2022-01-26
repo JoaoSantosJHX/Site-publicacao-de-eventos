@@ -1,4 +1,3 @@
-import firebase from './firebase'
 import { getAuth } from 'firebase/auth';
 
 // Import the functions you need from the SDKs you need
