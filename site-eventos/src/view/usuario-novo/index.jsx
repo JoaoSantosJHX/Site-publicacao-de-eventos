@@ -5,6 +5,7 @@ import './usuario-novo.css'
 import { async } from '@firebase/util'
 import  auth  from '../../config/firebase'
 
+
 function NovoUsuario() {
 
     const [email, setEmail] = useState()
@@ -38,13 +39,13 @@ function NovoUsuario() {
                 switch(erro.message) 
                 {
                 case 'Firebase: Error (auth/invalid-email).':
-                    setMsg('Email invalido');
+                    setMsg('Email inválido');
                     break
                 case 'Firebase: Error (auth/email-already-in-use).':
                     setMsg('Este email já está cadastrado.')
                     break
                 case 'Firebase: Password should be at least 6 characters (auth/weak-password).':
-                    setMsg('Senha deve ter pelo menos 6 caracteres.')
+                    setMsg('A senha deve ter pelo menos 6 caracteres.')
                     break
                 default:
                     setMsg('Não foi possível cadastrar. Tente mais tarde.')
@@ -70,7 +71,7 @@ function NovoUsuario() {
                                                              
              
              <div className="msg-login text-black text-center my-5">
-            { msgTipo === 'Sucesso!' && <span><strong>Foi!</strong> Usuario Cadastrado com sucesso! &#129299;</span>} 
+            { msgTipo === 'Sucesso!' && <span><strong>Foi!</strong> Usuário Cadastrado com sucesso! &#129299;</span>} 
             { msgTipo === 'erro' && <span><strong>Ops!</strong> {msg} &#128556;</span>}
             </div>
          </form>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../../view/login/login.css'
 import  auth  from '../../config/firebase'
+import { Link } from 'react-router-dom'
 
 import 'firebase/auth'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
@@ -48,15 +49,15 @@ function Login() {
 
             <div className="checkbox mb-3">
             <label>
-                <input type="checkbox" value="remember-me"/> Remember me
+                <input type="checkbox" value="remember-me"/> Lembrar de mim
             </label>
             </div>
             <button onClick={logar} className="w-100 btn btn-lg btn-login" type="button">Login</button>
 
 
             <div className="msg-login text-white text-center my-5">
-            { msgTipo === 'Sucesso!' && <span><strong>Foi!</strong> Voce esta conectado! &#129299;</span>} 
-            { msgTipo === 'erro' && <span><strong>Ops!</strong> Verifique se a senha ou o usuario estao corretos! &#128556;</span>}
+            { msgTipo === 'Sucesso!' && <span><strong>Foi!</strong> Você esta conectado! &#129299;</span>} 
+            { msgTipo === 'erro' && <span><strong>Ops!</strong> Verifique se a senha ou o usuário estão corretos! &#128556;</span>}
             </div>
                
                 
@@ -66,7 +67,7 @@ function Login() {
             <div className="opcoes-login mt-5 text-center">
                 <a href="#" className='mx-2'>Recuperar senha</a>
                 <span className="text-white">&#9733;</span>
-                <a href="#"className='mx-2'>Quero Cadastrar</a>
+                <Link to='novousuario' className='mx-2'>Quero Cadastrar</Link>
             </div>
 
             
