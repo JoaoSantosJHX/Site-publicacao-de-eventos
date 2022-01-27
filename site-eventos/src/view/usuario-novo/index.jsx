@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import './usuario-novo.css'
 import { async } from '@firebase/util'
 import  auth  from '../../config/firebase'
+import Navbar from '../../components/navbar/index'
 
 
 function NovoUsuario() {
@@ -57,6 +58,8 @@ function NovoUsuario() {
     }
 
     return (
+        <>
+        <Navbar />
         <div className='form-cadastro'>
          <form className='text-center form-login mx-auto mt-5'>
 
@@ -76,6 +79,7 @@ function NovoUsuario() {
             </div>
          </form>
         </div>
+        </>
     )
 }
 
