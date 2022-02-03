@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import '../../view/login/login.css'
 import  auth  from '../../config/firebase'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 import 'firebase/auth'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import { useSelector, useDispatch} from 'react-redux'
 
 function Login() {
 
@@ -13,14 +14,10 @@ function Login() {
     const [senha, setSenha] = useState()
     const [msgTipo, setMsgTipo] = useState()
 
+    const dispatch = useDispatch()
 
-    // const register = async () => {
-    //     try {
-    //     const user = await createUserWithEmailAndPassword(auth, registerEmail, registerSenha)
-    //     } catch (erro) {
-    //         console.log(erro.message)
-    //     }
-    // }
+
+   
 
     const logar = async () => {
         
@@ -30,6 +27,10 @@ function Login() {
                 email, 
                 senha)
                 setMsgTipo('Sucesso!')
+                setTimeout(() => {
+                    dispatch({type: 'LOG_IN', usuarioEmail: email})
+                }, 2000)
+                    
             } catch (error) {
                 setMsgTipo('erro')
             }
@@ -38,8 +39,9 @@ function Login() {
 
     return (
     <div className="login-content d-flex align-items-center">
-        <form className="form-signin mx-auto">
+        { useSelector(state => state.usuarioLogado) > 0 ? <Redirect to= '/' /> : null }
             
+        <form className="form-signin mx-auto">
             <h1 className="h3 mb-3 fw-bold text-white font-weight-bold text-center">Login</h1>
 
             
