@@ -9,14 +9,14 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg ">
             <div className="container-fluid">
-                <span className="navbar-brand text-white font-weight-bold">Eventos</span>
+            <i class="far fa-laugh-wink text-white fa-3x"></i>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-bars text-white"></i>
                      </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
 
-                    <li className="nav-item"><Link className="nav-link" to="/">Home</Link> </li>
+                    <li className="nav-item"><Link className="nav-link ms-4" to="/">Home</Link> </li>
 
                     {    useSelector(state => state.usuarioLogado) > 0 ?
                     <>

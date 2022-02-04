@@ -41,7 +41,8 @@ function Login() {
     <div className="login-content d-flex align-items-center">
         { useSelector(state => state.usuarioLogado) > 0 ? <Redirect to= '/' /> : null }
             
-        <form className="form-signin mx-auto">
+        <form className="form-signin mx-auto text-center">
+                <i class="far fa-laugh-wink text-white fa-5x"></i>
             <h1 className="h3 mb-3 fw-bold text-white font-weight-bold text-center">Login</h1>
 
             
@@ -67,7 +68,7 @@ function Login() {
                 
 
             <div className="opcoes-login mt-5 text-center">
-                <a href="#" className='mx-2'>Recuperar senha</a>
+                <Link to="/usuariorecuperarsenha" className='mx-2'>Recuperar senha</Link>
                 <span className="text-white">&#9733;</span>
                 <Link to='novousuario' className='mx-2'>Quero Cadastrar</Link>
             </div>
