@@ -33,6 +33,7 @@ function Login() {
                     
             } catch (error) {
                 setMsgTipo('erro')
+                
             }
         
     }
