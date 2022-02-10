@@ -1,9 +1,7 @@
 # Site-publicacao-de-eventos
-Site de publicação de eventos 
 
-
-A Proposta deste site é construir um Site de eventos com React.js, Bootstrap e Firebase.<br>
-<ul>O projeto contém:
+<h2>A Proposta deste site é construir um Site de eventos com React.js, Bootstrap e Firebase.<h2><br>
+<ul><strong>O projeto contém:</strong>
   <li>Página de Login</li>
   <li>página de Cadastro </li>
   <li>Recuperar senha</li>
