@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
 import './evento-cadastro.css'
-// import { useSelector} from 'react-redux'
-// import { Link } from 'react-router-dom'
+import { useSelector} from 'react-redux'
+import { Link } from 'react-router-dom'
 import firebase from '../../config/firebase'
-// import { storage } from '../../config/firebase';
-// import  auth  from '../../config/firebase'
 import Navbar from '../../components/navbar/index'
-
-
 const EventoCadastro = () => {
-    
-    const [msgTipo, setMsgTipo] = useState('sucesso!')
-   
 
-
+    const [msgTipo, setMsgTipo] = useState(
+        
+    )
 
   return (
       <>
@@ -26,7 +21,7 @@ const EventoCadastro = () => {
             <form>
                 <div className='form-group'>
                     <label className='mb-2'> Título:</label>
-                    <input  type="text" className='form-control' />
+                    <input type="text" className='form-control' />
                 </div>
 
                 <div className='form-group'>
@@ -48,12 +43,12 @@ const EventoCadastro = () => {
                 <div className='form-group row'>
                     <div className='col-6'>
                         <label>Data:</label>
-                        <input  type="date" className='form-control' />
+                        <input type="date" className='form-control' />
                     </div>
 
                     <div className='col-6'>
                         <label>Hora:</label>
-                        <input  type="time" className='form-control' />
+                        <input type="time" className='form-control' />
                     </div>
 
                     <div className='form-group'>
@@ -68,18 +63,15 @@ const EventoCadastro = () => {
             { msgTipo === 'Sucesso!' && <span><strong>Foi!</strong> Evento Cadastrado! &#129299;</span>} 
             { msgTipo === 'erro' && <span><strong>Ops!</strong> Erro! Tente novamente. &#128556;</span>}
             </div>
+                    
+
+
+
+
+
         </div>
       </>
   )
 };
 
 export default EventoCadastro;
-                    
-
-
-// onChange={(e) => setTitulo(e.target.value)}
-// onChange={(e) => setTipo(e.target.value)} 
-// onChange={(e) => setDetalhes(e.target.value)}
-// onChange={(e) => setData(e.target.value)}
-// onChange={(e) => setHora(e.target.value)}
-// onChange={(e) => setFoto(e.target.files[0])} 

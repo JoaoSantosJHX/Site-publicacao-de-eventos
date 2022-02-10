@@ -7,7 +7,7 @@ import Login from './view/login'
 import NovoUsuario from './view/usuario-novo'
 import Home from './view/home'
 import UsuarioRecuperarSenha from './view/usuario-recuperar-senha'
-import EventoCadastro from './view/evento-cadastro'
+import EventoCadastro from "./view/evento-cadastro";
 
 function App() {
   return (
