@@ -1,7 +1,7 @@
 # Site-publicacao-de-eventos
 
   <h2>A Proposta é construir um Site de eventos com React.js, Bootstrap e Firebase.</h2> <br>
-<ul><strong><h3>O projeto contém:</h3> <br> <br></strong> 
+<ul><strong><h3>O projeto contém:</h3>  <br></strong> 
   <li>     Página de Login</li>
   <li>     página de Cadastro </li>
   <li>     Recuperar senha</li>
@@ -12,6 +12,6 @@
   <br>
   <br>
   <br>
-                            Projeto em construção...
+                          <p>     Projeto em construção...</p>
 
 
