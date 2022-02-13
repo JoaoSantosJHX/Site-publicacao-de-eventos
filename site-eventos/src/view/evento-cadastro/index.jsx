@@ -6,9 +6,8 @@ import firebase from '../../config/firebase'
 import Navbar from '../../components/navbar/index'
 const EventoCadastro = () => {
 
-    const [msgTipo, setMsgTipo] = useState(
-        
-    )
+    const [msgTipo, setMsgTipo] = useState()
+    
 
   return (
       <>
@@ -60,7 +59,7 @@ const EventoCadastro = () => {
             </form>
 
             <div className="msg-login text-center my-5">
-            { msgTipo === 'Sucesso!' && <span><strong>Foi!</strong> Evento Cadastrado! &#129299;</span>} 
+            { msgTipo === 'Sucesso!' && <span><strong>Foi!</strong> Evento Publicado! &#129299;</span>} 
             { msgTipo === 'erro' && <span><strong>Ops!</strong> Erro! Tente novamente. &#128556;</span>}
             </div>
                     
