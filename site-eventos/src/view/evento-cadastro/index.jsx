@@ -7,6 +7,17 @@ import Navbar from '../../components/navbar/index'
 const EventoCadastro = () => {
 
     const [msgTipo, setMsgTipo] = useState()
+    const [titulo, setTitulo] = useState()
+    const [tipo, setTipo] = useState()
+    const [detalhes, setDetalhes] = useState()
+    const [data, setData] = useState()
+    const [hora, setHora] = useState()
+    const [foto, setFoto] = useState()
+    const [usuarioEmail, setUsuarioEmail] = useState()
+
+    function cadastrar() {
+        alert(`Vamos cadastrar`)
+    }
     
 
   return (
@@ -14,7 +25,7 @@ const EventoCadastro = () => {
       <Navbar/>
         <div className='col-12 container'>
             <div className='row '>
-                <h3 className='mx-auto mt-3 fw-bold text-center'>Cadastro de Eventos</h3>
+                <h3 className='mx-auto mt-3 fw-bold text-center'>Novo Evento</h3>
             </div>
 
             <form>
@@ -55,7 +66,7 @@ const EventoCadastro = () => {
                         <input type="file" className='form-control' />
                     </div>
                 </div>
-                <button type='button' className='btn btn-lg btn-block mt-3 mb-5 btn-cadastro'>Publicar Evento</button>
+                <button onClick={cadastrar} type='button' className='btn btn-lg btn-block mt-3 mb-5 btn-cadastro'>Publicar Evento</button>
             </form>
 
             <div className="msg-login text-center my-5">
