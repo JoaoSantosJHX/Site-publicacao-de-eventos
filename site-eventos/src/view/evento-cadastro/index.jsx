@@ -4,7 +4,18 @@ import { useSelector} from 'react-redux'
 import { Link } from 'react-router-dom'
 import firebase from '../../config/firebase'
 import Navbar from '../../components/navbar/index'
+// from firebase
+import { getFirestore, collection, query, where, getDocs } from "firebase/firestore";
+import { initializeApp } from "firebase/app"
+import { app } from '../../config/firebase'
+import { getApp } from "firebase/app";
+import { getStorage } from "firebase/storage";
+
+
+
 const EventoCadastro = () => {
+
+    // Estados 
 
     const [msgTipo, setMsgTipo] = useState()
     const [titulo, setTitulo] = useState()
@@ -15,8 +26,20 @@ const EventoCadastro = () => {
     const [foto, setFoto] = useState()
     const [usuarioEmail, setUsuarioEmail] = useState()
 
+    // Constantes para chamar o database e o storage do firebase
+    const firebaseApp = getApp()
+    const storage = getStorage(firebaseApp, `imagem/${foto.name}`)
+    const db = getFirestore(app)
+    
+    // Funcao para fazer o cadastro
+
     function cadastrar() {
-        alert(`Vamos cadastrar`)
+        //passando como referencia a imagem com o nome para guardar no storage
+        // storage.ref(`imagem/${foto.name}`).put(foto).then(() => {
+        //     console.log(db.image)
+        // }).catch(erro => {
+        //     setMsgTipo('Nao foi possivel cadastrar o evento')
+        // })
     }
     
 
